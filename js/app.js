@@ -24,8 +24,8 @@ function drawBall() {
     ballElement.classList.add("ball");
     ballElement.style.left = ball.x * gridSize + "px";
     ballElement.style.top = ball.y * gridSize + "px";
-    ballElement.style.backgroundColor = "red"; // Set ball color to black
-    ballElement.style.border = "2px solid black"; // Add a white border to the ball
+    ballElement.style.backgroundColor = "red"; 
+    ballElement.style.border = "2px solid black"; 
 
     // Append the ball element to the board after all other elements are drawn
     setTimeout(() => {
@@ -93,7 +93,7 @@ function generateBall() {
 
 function gameOver() {
     clearInterval(gameLoop);
-    alert(`Game Over! Your Score: ${score}`);
+    alert(`Good Luck Next Time!: ${score}`);
     resetGame();
 }
 
@@ -167,6 +167,8 @@ function getRandomColor() {
     // Return the color in CSS format
     return `rgb(${r},${g},${b})`;
 }
+
+// Set background image for the game board
 
 
 
