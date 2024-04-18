@@ -100,8 +100,10 @@ function gameOver() {
 function startGame() {
     gameStarted = true;
     document.getElementById("start-btn").innerText = "Restart";
+    document.getElementById("start-btn").classList.add("glow"); // Add glow effect
     gameLoop = setInterval(moveSnake, 100);
     generateBall();
+    textcontent = "Many more apples";
 }
 
 function resetGame() {
@@ -112,6 +114,7 @@ function resetGame() {
     document.getElementById("score").innerText = `Score: ${score}`;
     gameStarted = false;
     document.getElementById("start-btn").innerText = "Start";
+    document.getElementById("start-btn").classList.remove("glow"); // Remove glow effect
     drawSnake();
     generateBall();
 }
@@ -164,6 +167,7 @@ function getRandomColor() {
     // Return the color in CSS format
     return `rgb(${r},${g},${b})`;
 }
+
 
 
 
