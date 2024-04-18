@@ -1,10 +1,11 @@
-
-body {  display: flex;
+body {
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: black; /* Set the background color to black */
+  background-image: url('https://i.ytimg.com/vi/pQ9VBLLprpo/maxresdefault.jpg'); /* Set the background image */
+  background-size: cover; /* Cover the everything */
 }
 
 #game-container {
@@ -37,7 +38,6 @@ body {  display: flex;
   left: 0; /* Ensure explicit positioning */
 }
 
-
 #score {
   color: white;
   position: absolute;
@@ -50,4 +50,36 @@ body {  display: flex;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+#settings {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: bisque;
+  font-style: italic
+}
+
+#settings label {
+  margin-right: 10px;
+}
+
+@keyframes glow {
+  0% {
+      box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.8), 0 0 20px 5px rgba(0, 255, 255, 0.4), 0 0 30px 5px rgba(0, 255, 255, 0.2);
+  }
+  50% {
+      box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.8), 0 0 20px 10px rgba(0, 255, 255, 0.6), 0 0 30px 15px rgba(0, 255, 255, 0.4);
+  }
+  100% {
+      box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.8), 0 0 20px 5px rgba(0, 255, 255, 0.4), 0 0 30px 5px rgba(0, 255, 255, 0.2);
+  }
+}
+
+#start-btn.glow {
+  animation: glow 1s infinite alternate;
+}
+
+#start-btn.restart-glow {
+  animation: glow 1s infinite alternate;
 }
